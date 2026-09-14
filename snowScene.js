@@ -56,10 +56,10 @@ const wind = { time: 0, strength: 0.03, speed: 0.5 }
 // ===================== 纹理加载工具 =====================
 function createTex(path, repeatX = 20, repeatZ = 20, isNormalDX = false) {
   const tex = textureLoader.load(
-    `/texture/${path}`,
-    () => console.log(`✅ 雪原贴图加载: /texture/${path}`),
+    path,
+    () => console.log(`✅ 贴图加载：${path}`),
     undefined,
-    () => console.warn(`❌ 雪原贴图缺失: /texture/${path}`)
+    () => console.warn(`❌ 贴图缺失：${path}`)
   )
   if (tex) {
     tex.wrapS = THREE.RepeatWrapping

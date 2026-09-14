@@ -40,7 +40,7 @@ export function createBirdController({
   function create() {
     const loader = new GLTFLoader()
     loader.load(
-      '/bird_orange/scene.gltf',
+      'bird_orange/scene.gltf',
       (gltf) => {
         birdMesh = new THREE.Group()
         birdModel = gltf.scene
